@@ -1,0 +1,12 @@
+<div class="container pt-3">
+	<% @products.each do |product|%>
+		<div class="card" style="width: 33.3%; float:left; margin: 8px">
+		  	<%= image_tag(product.image, :class => 'card-img-top') %>
+		  	<div class="card-body">
+		    	<h5 class="card-title"><%= product.title%></h5>
+		    	<p class="card-text" style="height: 30px; overflow:hidden; white-space: nowrap;   text-overflow: ellipsis; "><%= product.content%></p>
+		    	<%= link_to("Add to Cart", product_path(product), :class => 'btn btn-primary mt-2')%>
+		  	</div>
+		</div>
+	<% end%>
+</div>

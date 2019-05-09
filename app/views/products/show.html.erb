@@ -1,0 +1,12 @@
+<div class="container pt-3">
+	<%= link_to('Back', products_path, :class => 'btn btn-info mb-3')%>
+	<div class="row">
+		<div class="col-6">
+			<%= image_tag(@product.image, :width => '100%')%>
+		</div>
+		<div class="col-6">
+			<h1><%= @product.title%></h1>
+			<p><%= @product.content%></p>
+		</div>
+	</div>
+</div>
